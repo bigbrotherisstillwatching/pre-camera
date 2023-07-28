@@ -21,19 +21,3 @@ dependencies {
     implementation 'com.android.support:support-v4:19.1.0'
     implementation files('libs/umeng-analytics-v5.2.4.jar')
 }
-
-plugins {
-    id("org.openrewrite.rewrite") version("6.1.19")
-}
-
-rewrite {
-    activeRecipe("org.openrewrite.java.migrate.Java8toJava11")
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    rewrite("org.openrewrite.recipe:rewrite-migrate-java:2.0.8")
-}
