@@ -22,6 +22,8 @@ jobs:
 
     - name: Create .android folder
       run: mkdir ~/.android
+    - name: Install libncurses5
+      run: sudo apt update && sudo apt install libncurses5
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
