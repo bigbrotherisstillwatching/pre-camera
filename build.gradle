@@ -10,6 +10,22 @@ buildscript {
     }
 }
 
+plugins {
+    id("org.openrewrite.rewrite") version("6.1.19")
+}
+
+rewrite {
+    activeRecipe("org.openrewrite.java.migrate.Java8toJava11")
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    rewrite("org.openrewrite.recipe:rewrite-migrate-java:2.0.8")
+}
+
 allprojects {
     repositories {
         google()
