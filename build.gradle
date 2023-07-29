@@ -1,5 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    plugins {
+        id("org.openrewrite.rewrite") version("6.1.19")
+    }
+    rewrite {
+        activeRecipe("org.openrewrite.java.migrate.Java8toJava11")
+    }
     repositories {
         google()
         mavenCentral()
@@ -7,6 +13,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.0'
+        rewrite("org.openrewrite.recipe:rewrite-migrate-java:2.0.8")
     }
 }
 
