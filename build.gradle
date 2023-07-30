@@ -15,7 +15,9 @@ plugins {
 }
 
 repositories {
+    google()
     mavenCentral()
+    jcenter()
 }
 
 rewrite {
