@@ -1,22 +1,3 @@
-plugins {
-    id("org.openrewrite.rewrite") version("6.1.19")
-}
-
-rewrite {
-    activeRecipe("org.openrewrite.java.migrate.Java8toJava11")
-    activeRecipe("org.openrewrite.java.migrate.JavaVersion11")
-    activeRecipe("org.openrewrite.java.AddApache2LicenseHeader")
-    activeRecipe("com.yourorg.UpdateJavaCompatibility1")
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    rewrite("org.openrewrite.recipe:rewrite-migrate-java:2.0.8")
-}
-
 apply plugin: 'com.android.application'
 
 android {
