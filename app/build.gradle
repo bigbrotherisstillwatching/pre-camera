@@ -5,6 +5,7 @@ plugins {
 rewrite {
     activeRecipe("org.openrewrite.java.migrate.Java8toJava11")
     activeRecipe("org.openrewrite.java.migrate.JavaVersion11")
+    activeRecipe("org.openrewrite.java.AddApache2LicenseHeader")
 }
 
 repositories {
