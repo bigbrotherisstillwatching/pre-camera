@@ -25,7 +25,7 @@ rewrite {
 }
 
 dependencies {
-    implementation rewrite('org.openrewrite.recipe:rewrite-migrate-java:2.0.8')
+    rewrite('org.openrewrite.recipe:rewrite-migrate-java:2.0.8')
 }
 
 allprojects {
