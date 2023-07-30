@@ -7,7 +7,6 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.2.0'
-        rewrite("org.openrewrite.recipe:rewrite-migrate-java:2.0.8")
     }
 }
 
@@ -19,13 +18,18 @@ rewrite {
     activeRecipe("org.openrewrite.java.migrate.Java8toJava11")
 }
 
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    rewrite("org.openrewrite.recipe:rewrite-migrate-java:2.0.8")
+}
+
 allprojects {
     repositories {
         google()
         mavenCentral()
         jcenter()
-    }
-    dependencies {
-    rewrite("org.openrewrite.recipe:rewrite-migrate-java:2.0.8")   
     }
 }
