@@ -20,13 +20,7 @@ repositories {
 
 rewrite {
     activeRecipe(
-        'org.openrewrite.java.migrate.Java8toJava11',
-    )
-}
-
-dependencies {
-    rewrite(
-        'org.openrewrite.recipe:rewrite-migrate-java:2.0.8',
+        'org.openrewrite.java.OrderImports',
     )
 }
 
