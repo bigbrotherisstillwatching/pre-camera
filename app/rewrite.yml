@@ -1,1 +1,9 @@
-
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.yourorg.UpdateJavaCompatibility1
+displayName: Update Gradle project Java compatibility example
+recipeList:
+  - org.openrewrite.gradle.UpdateJavaCompatibility:
+      version: 11
+      compatibilityType: null
+      declarationStyle: null
