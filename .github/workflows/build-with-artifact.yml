@@ -27,9 +27,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Rewrite with openrewrite
-      run: ./gradlew rewriteDryRun
+      run: ./gradlew rewriteDryRun --warning-mode all
     - name: Build with Gradle
-      run: ./gradlew app:packageReleaseUniversalApk
+      run: ./gradlew app:packageReleaseUniversalApk --warning-mode all
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
