@@ -284,7 +284,7 @@ public class CamcorderManager implements PreviewCallback {
         Camera.Size cameraPreviewSize = mParms.getPreviewSize();
         mPreviewTextureWidth = cameraPreviewSize.width;
         mPreviewTextureHeight = cameraPreviewSize.height;
-    	mPreviewImageSize = (int) FloatMath.ceil(mPreviewTextureWidth * mPreviewTextureHeight
+    	mPreviewImageSize = (int) Math.ceil(mPreviewTextureWidth * mPreviewTextureHeight
     			* (ImageFormat.getBitsPerPixel(mParms.getPreviewFormat()) / 8.0f));
 
         String previewFacts = cameraPreviewSize.width + "x" + cameraPreviewSize.height +
