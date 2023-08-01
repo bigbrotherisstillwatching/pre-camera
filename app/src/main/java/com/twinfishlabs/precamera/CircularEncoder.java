@@ -164,7 +164,7 @@ public class CircularEncoder {
         mVideoEncoderThread.waitUntilReady();
     }
 
-	private MediaCodec createVideoEncoder() {
+	private MediaCodec createVideoEncoder() throws IOException {
 		MediaFormat videoFormat = MediaFormat.createVideoFormat(VIDEO_MIME_TYPE, mVideoWidth, mVideoHeight);
 
         videoFormat.setInteger(MediaFormat.KEY_COLOR_FORMAT,
