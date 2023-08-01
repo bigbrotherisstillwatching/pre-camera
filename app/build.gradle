@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
+    compileSdkVersion 26
     namespace 'com.twinfishlabs.precamera'
 
     defaultConfig {
         applicationId "com.twinfishlabs.precamera"
         minSdkVersion 18
-        targetSdkVersion 22
+        targetSdkVersion 26
     }
 
     buildTypes {
