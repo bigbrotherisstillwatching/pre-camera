@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.twinfishlabs.precamera"
         minSdkVersion 18
-        targetSdkVersion 19
+        targetSdkVersion 20
     }
 
     buildTypes {
