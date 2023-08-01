@@ -15,7 +15,3 @@ allprojects {
         mavenCentral()
     }
 }
-
-tasks.withType(JavaCompile) {
-    options.deprecation = true
-}
