@@ -29,7 +29,7 @@ jobs:
 #    - name: Rewrite with openrewrite
 #      run: ./gradlew rewriteDryRun --warning-mode all
     - name: Build with Gradle
-      run: ./gradlew app:packageReleaseUniversalApk
+      run: ./gradlew app:packageDebugUniversalApk
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
