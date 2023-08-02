@@ -256,9 +256,6 @@ public class Utilities {
 			})
 			.setNegativeButton(R.string.fail_dialog_button_report, new AlertDialog.OnClickListener() {
 				public void onClick(DialogInterface dialog, int which) {
-					if (Utilities.sLastException != null) {
-						MobclickAgent.reportError(activity, Utilities.sLastException);
-					}
 					activity.finish();
 				}
 			})
