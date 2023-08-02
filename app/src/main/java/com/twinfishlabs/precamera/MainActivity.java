@@ -3,7 +3,6 @@ package com.twinfishlabs.precamera;
 import java.lang.ref.WeakReference;
 
 import com.twinfishlabs.precamera.gallery.GalleryActivity;
-import com.umeng.analytics.MobclickAgent;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -348,7 +347,6 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback, On
 
         PrefUtils.notifyChanged();
     	mGalleryButton.refreshThumbnail();
-        MobclickAgent.onResume(this);
         if (!initForResume()) {
         	Utilities.showFailDialog(this);
         }
@@ -375,7 +373,6 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback, On
         if (mTakedPicturesView.isVisible()) {
         	mTakedPicturesView.onActivityPause();
         }
-        MobclickAgent.onPause(this);
         CamcorderManager.Instance.releaseAllResource();
         mMyOrientationEventListener.disable();
     }
