@@ -45,7 +45,5 @@
             android:theme="@style/GalleryActivityTheme"/>
             <!-- android:process=":gallery" -->
 
-	    <meta-data android:value="55853ad767e58e2a1c00889f" android:name="UMENG_APPKEY" />
-	    <meta-data android:value="www" android:name="UMENG_CHANNEL"/>
     </application>
 </manifest>
