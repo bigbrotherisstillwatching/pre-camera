@@ -20,7 +20,6 @@ import android.widget.TextView;
 import com.twinfishlabs.precamera.PrefUtils;
 import com.twinfishlabs.precamera.R;
 import com.twinfishlabs.precamera.Utilities;
-import com.umeng.analytics.MobclickAgent;
 
 public class GalleryActivity extends Activity implements OnClickListener {
 
@@ -64,13 +63,11 @@ public class GalleryActivity extends Activity implements OnClickListener {
 	protected void onResume() {
 		super.onResume();
 		PrefUtils.notifyChanged();
-        MobclickAgent.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-        MobclickAgent.onPause(this);
 	}
 
 	@Override
