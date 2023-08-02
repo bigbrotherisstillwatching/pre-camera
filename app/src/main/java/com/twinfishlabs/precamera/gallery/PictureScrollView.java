@@ -150,7 +150,7 @@ public class PictureScrollView extends View {
 	}
 
 	@Override
-	public void draw(Canvas canvas) {
+	public void super.draw(Canvas canvas) {
 		canvas.translate(mTransX, 0);
 		if (mCurrBitmap != null) {
 			mSrcRect.set(0, 0, mCurrBitmap.getWidth(), mCurrBitmap.getHeight());
