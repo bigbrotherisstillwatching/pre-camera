@@ -365,7 +365,7 @@ public class TakedPicturesView extends MyLinearLayout {
 		/* draw background */
 		mPaint.setStyle(Style.FILL);
 		mPaint.setColor(0xDD552222);
-		canvas.save(Canvas.ALL_SAVE_FLAG);
+		canvas.save(Canvas.CLIP_SAVE_FLAG);
 		canvas.clipRect(0, 0, getWidth(), getHeight()/2);
 		canvas.drawRoundRect(mBgRect, mBgRectRoundRadius, mBgRectRoundRadius, mPaint);
 		canvas.restore();
