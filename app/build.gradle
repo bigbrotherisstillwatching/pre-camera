@@ -10,10 +10,6 @@ android {
         targetSdkVersion 26
     }
 
-    lintOptions {
-    disable 'SuspiciousIndentation'
-    }
-    
     buildTypes {
         release {
             minifyEnabled false
