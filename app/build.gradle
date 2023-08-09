@@ -20,7 +20,7 @@ android {
 
 dependencies {
 //    implementation 'com.android.support:support-v4:26.0.2'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.sqlite:sqlite-framework:2.2.0'
     debugImplementation 'com.facebook.flipper:flipper:0.201.0'
     debugImplementation 'com.facebook.soloader:soloader:0.10.5'
