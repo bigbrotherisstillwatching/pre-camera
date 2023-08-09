@@ -8,6 +8,7 @@ android {
         applicationId "com.twinfishlabs.precamera"
         minSdkVersion 18
         targetSdkVersion 26
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -20,6 +21,7 @@ android {
 
 dependencies {
 //    implementation 'com.android.support:support-v4:26.0.2'
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.appcompat:appcompat:1.3.0'
     implementation 'androidx.sqlite:sqlite-framework:2.2.0'
     debugImplementation 'com.facebook.flipper:flipper:0.201.0'
