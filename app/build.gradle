@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 31
     namespace 'com.twinfishlabs.precamera'
 
     defaultConfig {
         applicationId "com.twinfishlabs.precamera"
         minSdkVersion 18
-        targetSdkVersion 26
+        targetSdkVersion 31
     }
 
     buildTypes {
@@ -26,4 +26,10 @@ dependencies {
     debugImplementation 'com.facebook.soloader:soloader:0.10.5'
     
     releaseImplementation 'com.facebook.flipper:flipper-noop:0.201.0'
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core-ktx:1.6.0'
+    }
 }
