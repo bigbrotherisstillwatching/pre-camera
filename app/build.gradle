@@ -18,10 +18,6 @@ android {
     }
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     implementation 'com.android.support:support-v4:26.0.2'
     debugImplementation 'com.facebook.flipper:flipper:0.210.1'
