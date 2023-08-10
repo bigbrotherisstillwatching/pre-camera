@@ -7,6 +7,12 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.widget.Toast;
+import com.facebook.flipper.android.AndroidFlipperClient;
+import com.facebook.flipper.android.utils.FlipperUtils;
+import com.facebook.flipper.core.FlipperClient;
+import com.facebook.flipper.plugins.inspector.DescriptorMapping;
+import com.facebook.flipper.plugins.inspector.InspectorFlipperPlugin;
+import com.facebook.soloader.SoLoader;
 
 public class SettingsActivity extends PreferenceActivity implements OnPreferenceChangeListener {
 	@SuppressWarnings("deprecation")
@@ -35,6 +41,14 @@ public class SettingsActivity extends PreferenceActivity implements OnPreference
 		PreferenceScreen screen = getPreferenceScreen();
 		for (int i = 0; i < screen.getPreferenceCount(); i++) {
 			screen.getPreference(i).setOnPreferenceChangeListener(this);
+		}
+
+		SoLoader.init(this, false);
+		
+		if (BuildConfig.DEBUG && FlipperUtils.shouldEnableFlipper(this)) {
+			final FlipperClient client = AndroidFlipperClient.getInstance(this);
+			client.addPlugin(new InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()));
+			client.start();
 		}
 	}
 
