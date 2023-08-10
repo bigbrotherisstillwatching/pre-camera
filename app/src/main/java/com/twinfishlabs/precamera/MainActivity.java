@@ -30,6 +30,12 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.facebook.flipper.android.AndroidFlipperClient;
+import com.facebook.flipper.android.utils.FlipperUtils;
+import com.facebook.flipper.core.FlipperClient;
+import com.facebook.flipper.plugins.inspector.DescriptorMapping;
+import com.facebook.flipper.plugins.inspector.InspectorFlipperPlugin;
+import com.facebook.soloader.SoLoader;
 
 public class MainActivity extends Activity implements SurfaceHolder.Callback, OnClickListener {
     private static final String TAG = Utilities.TAG + ".Activity";
@@ -182,6 +188,14 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback, On
         updateControls();
 
         mMyOrientationEventListener = new MyOrientationEventListener(this.getApplicationContext());
+
+	SoLoader.init(this, false);
+
+	if (BuildConfig.DEBUG && FlipperUtils.shouldEnableFlipper(this)) {
+		final FlipperClient client = AndroidFlipperClient.getInstance(this);
+		client.addPlugin(new InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()));
+		client.start();
+	}
     }
 
     private void setupBlinkText(boolean enable) {
