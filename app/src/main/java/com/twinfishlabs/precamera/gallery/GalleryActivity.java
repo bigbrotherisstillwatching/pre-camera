@@ -27,7 +27,7 @@ import com.facebook.flipper.core.FlipperClient;
 import com.facebook.flipper.plugins.inspector.DescriptorMapping;
 import com.facebook.flipper.plugins.inspector.InspectorFlipperPlugin;
 import com.facebook.soloader.SoLoader;
-import com.twinfislabs.precamera.MainActivity;
+import com.twinfishlabs.precamera.MainActivity;
 
 public class GalleryActivity extends Activity implements OnClickListener {
 
