@@ -2,6 +2,7 @@ package com.twinfishlabs.precamera.gallery;
 
 import java.io.File;
 
+import android.app.Application;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
