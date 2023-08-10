@@ -40,7 +40,14 @@ public class GalleryActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		SoLoader.init(this, false);
 
+		if (BuildConfig.DEBUG && FlipperUtils.shouldEnableFlipper(this)) {
+			final FlipperClient client = AndroidFlipperClient.getInstance(this);
+			client.addPlugin(new InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()));
+			client.start();
+		}
+		
 		setContentView(R.layout.gallery);
 		if (Build.VERSION.SDK_INT >= 19) {
 			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -64,14 +71,6 @@ public class GalleryActivity extends Activity implements OnClickListener {
 				refreshUi();
 			}
 		});
-
-		SoLoader.init(this, false);
-
-		if (BuildConfig.DEBUG && FlipperUtils.shouldEnableFlipper(this)) {
-			final FlipperClient client = AndroidFlipperClient.getInstance(this);
-			client.addPlugin(new InspectorFlipperPlugin(this, DescriptorMapping.withDefaults()));
-			client.start();
-		}
 	}
 
 	@Override
