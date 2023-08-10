@@ -18,12 +18,11 @@ public class MyApplication extends Application {
 	@Override
 	public void onCreate() {
 		super.onCreate();
+		SoLoader.init(this, false);
 
 		Configs.init();
 		PrefUtils.init();
 		CamcorderManager.init();
-
-		SoLoader.init(this, false);
 		
 		if (BuildConfig.DEBUG && FlipperUtils.shouldEnableFlipper(this)) {
 			final FlipperClient client = AndroidFlipperClient.getInstance(this);
