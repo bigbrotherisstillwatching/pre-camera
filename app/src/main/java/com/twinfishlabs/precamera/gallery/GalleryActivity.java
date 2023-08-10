@@ -2,7 +2,6 @@ package com.twinfishlabs.precamera.gallery;
 
 import java.io.File;
 
-import android.app.Application;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -28,6 +27,7 @@ import com.facebook.flipper.core.FlipperClient;
 import com.facebook.flipper.plugins.inspector.DescriptorMapping;
 import com.facebook.flipper.plugins.inspector.InspectorFlipperPlugin;
 import com.facebook.soloader.SoLoader;
+import com.twinfislabs.precamera.MainActivity;
 
 public class GalleryActivity extends Activity implements OnClickListener {
 
