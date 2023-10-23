@@ -29,9 +29,9 @@ jobs:
 #    - name: Rewrite with openrewrite
 #      run: ./gradlew rewriteDryRun --warning-mode all
     - name: Build with Gradle
-      run: ./gradlew app:packageDebugUniversalApk
+      run: ./gradlew app:packageReleaseUniversalApk
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: artifact
-        path: app/build/outputs/universal_apk/debug
+        path: app/build/outputs/universal_apk/release
